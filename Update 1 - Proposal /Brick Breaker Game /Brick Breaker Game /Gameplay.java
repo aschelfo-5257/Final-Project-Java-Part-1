@@ -41,30 +41,30 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
   }
   @Override
   public void paint(Graphics g) {
-    // background
+    // background.
     g.setColor(Color.black);
     g.setColor(Color.black);
     g.fillRect(1,1, 692, 592);
 
-    // drawing map
+    // drawing map.
     map.draw((Graphics2D)g);
 
-    // borders
+    // borders.
     g.setColor(Color.yellow);
     g.fillRect(0, 0, 3, 592);
     g.fillRect(0, 0, 692, 3);
     g.fillRect(691, 0, 3, 592);
 
-    // scores
+    // scores.
     g.setColor(Color.white);
     g.setFont(new Font("serif", Font.BOLD, 25));
     g.drawString(Integer.toString(score), 590, 30);
 
-    // the paddle
+    // the paddle.
     g.setColor(Color.green);
     g.fillRect(playerX, 550, 100, 8);
 
-    // the ball
+    // the ball.
     g.setColor(Color.yellow);
     g.fillOval(ballposX, ballposY, 20, 20);
 
