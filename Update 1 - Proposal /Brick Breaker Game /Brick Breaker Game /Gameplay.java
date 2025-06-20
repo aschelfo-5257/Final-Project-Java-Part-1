@@ -12,6 +12,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import javax.swing.JFrame;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener{
   private Timer timer;
@@ -212,5 +213,17 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     }
   }
   
+}
+public class Main {
+    public static void main(String[] args) {
+        JFrame obj = new JFrame();
+        Gameplay gamePlay = new Gameplay(); // Make sure Gameplay is in the same package or import it
+        obj.setBounds(10, 10, 700, 600); // Match the dimensions used in Gameplay
+        obj.setTitle("Brick Breaker Game");
+        obj.setResizable(false); // Prevent resizing to keep game layout stable
+        obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        obj.add(gamePlay);
+        obj.setVisible(true);
+    }
 }
 
