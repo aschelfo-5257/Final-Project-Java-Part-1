@@ -44,7 +44,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
   public void paint(Graphics g) {
     // background
     g.setColor(Color.black);
-    g.setColor(Color.black);
     g.fillRect(1,1, 692, 592);
 
     // drawing map
@@ -97,7 +96,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
   @Override
   public void actionPerformed(ActionEvent e) {
     if(play) {
-    if(play) {
       if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))) {
         ballYdir = -ballYdir;
       }
@@ -149,7 +147,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     }
     
       repaint();
-    }
   }
 
   @Override
