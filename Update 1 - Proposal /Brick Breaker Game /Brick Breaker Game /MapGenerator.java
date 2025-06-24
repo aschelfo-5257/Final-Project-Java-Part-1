@@ -51,5 +51,8 @@ public class MapGenerator {
   public double getBrickHeight() {
     return brickHeight;
   }
-  Gameplay gamePlay = new Gameplay();
+  public class Main {
+      Frame obj = new JFrame();
+      Gameplay gamePlay = new Gameplay();
+  }
 }
