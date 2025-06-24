@@ -9,6 +9,7 @@ public class MapGenerator {
     public int brickWidth;
     public int brickHeight;
     private static final int BRICK_ACTIVE = 1;
+    private static final int BRICK_INACTIVE = 0;
     private static final int HORIZONTAL_OFFSET = 80;
     private static final int VERTICAL_OFFSET = 50;
     // Use these in the draw method for clarity
@@ -28,16 +29,20 @@ public class MapGenerator {
     public void draw(Graphics2D g) {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[0].length; j++) {
-                if (map[i][j] > 0) {
+                if (map[i][j] == BRICK_ACTIVE) {
                     g.setColor(Color.white);
-                    g.fillRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
+                    g.fillRect(j * brickWidth + HORIZONTAL_OFFSET, i * brickHeight + VERTICAL_OFFSET, brickWidth, brickHeight);
 
-                    // draw brick borders
                     g.setStroke(new BasicStroke(3));
                     g.setColor(Color.black);
-                    g.drawRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
+                    g.drawRect(j * brickWidth + HORIZONTAL_OFFSET, i * brickHeight + VERTICAL_OFFSET, brickWidth, brickHeight);
                 }
             }
         }
     }
+
+    public void setBrickValue(int value, int row, int col) {
+        map[row][col] = value;
+    }
+    // Getters if needed...
 }
