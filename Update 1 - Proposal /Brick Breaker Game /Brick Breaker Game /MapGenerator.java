@@ -8,6 +8,10 @@ public class MapGenerator {
     public int[][] map;
     public int brickWidth;
     public int brickHeight;
+    private static final int BRICK_ACTIVE = 1;
+    private static final int HORIZONTAL_OFFSET = 80;
+    private static final int VERTICAL_OFFSET = 50;
+    // Use these in the draw method for clarity
 
     public MapGenerator(int row, int col) {
         map = new int[row][col];
