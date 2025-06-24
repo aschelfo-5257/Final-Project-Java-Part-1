@@ -51,4 +51,5 @@ public class MapGenerator {
   public double getBrickHeight() {
     return brickHeight;
   }
+  Gameplay gamePlay = new Gameplay();
 }
