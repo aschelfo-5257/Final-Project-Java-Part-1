@@ -40,9 +40,11 @@ public class MapGenerator {
             }
         }
     }
-
+    // Example: add bounds checking in setBrickValue
     public void setBrickValue(int value, int row, int col) {
-        map[row][col] = value;
+        if (row >= 0 && row < map.length && col >= 0 && col < map[0].length) {
+            map[row][col] = value;
+        }
     }
     // Getters if needed...
 }
